@@ -1,0 +1,30 @@
+name: Bug
+description: Something that's broken.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+      description: The behavior you see, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: How to make it happen, or the failing test if there is one.
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - "Security or data exposure"
+        - "Users blocked or see wrong data"
+        - "Annoying but has a workaround"
+        - "Cosmetic"
+    validations:
+      required: true
